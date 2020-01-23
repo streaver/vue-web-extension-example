@@ -8,7 +8,7 @@
       <h2>Want more magic?</h2>
       <span>Try them:</span>
 
-      <div>
+      <div class="body-color-radios">
         <input type="radio" v-model="bodyColor" value="#f4eebc">
         <input type="radio" v-model="bodyColor" value="#bfe7c5">
         <input type="radio" v-model="bodyColor" value="#c9daf8">
@@ -16,7 +16,7 @@
 
       <h4>even more?</h4>
 
-      <div>
+      <div class="popup-body-color-radios">
         <input type="radio" v-model="popupBodyColor" value="#bfe7c5">
         <input type="radio" v-model="popupBodyColor" value="#c9daf8">
         <input type="radio" v-model="popupBodyColor" value="#f4eebc">
