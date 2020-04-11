@@ -2,7 +2,7 @@
   <div class="extension">
     <h1>Hi there! 👋 Hope you're doing great!</h1>
 
-    <button v-on:click="writeInConsole">Do the magic!</button>
+    <button id="do-the-magic-btn" v-on:click="writeInConsole">Do the magic!</button>
 
     <div>
       <h2>Want more magic?</h2>
@@ -17,9 +17,9 @@
       <h4>even more?</h4>
 
       <div class="popup-body-color-radios">
-        <input type="radio" v-model="popupBodyColor" value="#bfe7c5">
-        <input type="radio" v-model="popupBodyColor" value="#c9daf8">
-        <input type="radio" v-model="popupBodyColor" value="#f4eebc">
+        <input id="popup--green" type="radio" v-model="popupBodyColor" value="#bfe7c5">
+        <input id="popup--blue" type="radio" v-model="popupBodyColor" value="#c9daf8">
+        <input id="popup--yellow" type="radio" v-model="popupBodyColor" value="#f4eebc">
       </div>
     </div>
   </div>
@@ -72,6 +72,9 @@ export default {
             alert(
               "Open the browser's console to see the magic. Need to have at least one tab in some page."
             );
+          })
+          .catch((error) => {
+            console.error('error, double check you are on some page. i.e: streaver.com' , error);
           });
       });
     }
