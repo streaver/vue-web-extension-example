@@ -9,7 +9,29 @@
     "build:dev": "cross-env NODE_ENV=development webpack --hide-modules",
     "build-zip": "node scripts/build-zip.js",
     "watch": "npm run build -- --watch",
-    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch"
+    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch",
+    "test": "jest",
+    "test:integration": ""
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node",
+      "vue"
+    ],
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    },
+    "setupFiles": [
+      "jest-webextension-mock"
+    ]
   },
   "dependencies": {
     "vue": "^2.6.10",
@@ -20,7 +42,9 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
     "@babel/runtime-corejs3": "^7.6.3",
+    "@vue/test-utils": "^1.0.0-beta.31",
     "archiver": "^3.1.1",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.2",
     "copy-webpack-plugin": "^4.5.3",
     "core-js": "^3.2.1",
@@ -28,14 +52,20 @@
     "css-loader": "^3.2.0",
     "ejs": "^2.7.1",
     "file-loader": "^1.1.11",
+    "jest-puppeteer": "^4.4.0",
+    "jest-transform-stub": "^2.0.0",
+    "jest-webextension-mock": "^3.5.0",
+    "jest": "^25.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.9.3",
+    "puppeteer": "^2.0.0",
     "sass-loader": "^7.3.1",
+    "vue-jest": "^3.0.5",
     "vue-loader": "^15.8.3",
     "vue-template-compiler": "^2.6.10",
     "web-ext-types": "^3.2.1",
-    "webpack": "^4.20.2",
     "webpack-chrome-extension-reloader": "^1.3.0",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack": "^4.20.2"
   }
 }

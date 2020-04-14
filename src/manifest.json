@@ -25,5 +25,7 @@
     "scripts": [
       "background.js"
     ]
-  }
+  },
+  "key": "<YOUR-GENERATED-ID>",
+  "id": "<YOUR-EXTENSION-ID>"
 }
