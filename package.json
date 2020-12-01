@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "vue": "^2.6.10",
-    "webextension-polyfill": "^0.4.0"
+    "webextension-polyfill": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
